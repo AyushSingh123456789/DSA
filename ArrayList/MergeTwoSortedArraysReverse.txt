@@ -1,0 +1,29 @@
+int[] a = {1,2,3,4,5};
+        int[] b = {20,30,40,50,60};
+        int[] c = new int[a.length + b.length];
+        
+        for(int ele: c)
+        {
+            System.out.print(ele + " ");
+        }
+        merge(c,a,b);
+        System.out.println();
+        for(int ele2: c)
+        {
+            System.out.print(ele2 + " ");
+        }
+    }
+    static void merge(int[] c, int[] a, int[] b)
+    {
+        int i =a.length-1; 
+        int j = b.length-1;
+        int k = c.length-1;
+        
+        while(i >= 0)
+        {
+            c[k--] = a[i--];
+        }
+        while(j >=0)
+        {
+            c[k--] = b[j--];
+        }

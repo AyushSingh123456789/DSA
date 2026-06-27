@@ -1,0 +1,26 @@
+import java.util.Arrays;
+public class ShallowCopyDeepCopy{
+    public static void main(String[]args){
+        int[] arr = {10,20,30,40}; //16bytes in memory(4 bytes per int)
+        // Shallow copy of arr(directly affects the Original) -:
+
+        int[] x = arr;
+        x[0] = 100; //(change 0th index value for both(arr & x))
+        System.out.println(arr[0]); // prints 100
+
+
+        // Deep copy of arr(Brand New Array, import java.util.Arrays is a must) => (Deep Copy ka change don't affect the Original)
+        i) Method1:
+
+        int[] deep = Arrays.copyOf(arr, arr.length) // deep copy crea
+        deep[0] = 100; // changes 0th index value for only deep
+        SOP(arr[0]); // prints 10 (no change in arr[0])
+
+        ii) Method2:
+
+        int[]deep = new int[arr.length];
+        for(int i= 0; i <arr.length; i++){
+            deep[i] = arr[i];
+        }
+    }
+}

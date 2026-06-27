@@ -1,0 +1,50 @@
+Ways to declare and Traverse an Array(Possible for all the data types: int, char, float, double, etc & String) -:
+
+I) Method-1: 
+
+int[] arr = {1,2,3,4,5,-10};
+int n = arr.length; // index = 0 to n-1
+for(int i = 0; i < n; i++){
+    System.out.print(arr[i] + " ");
+}
+
+II) Method -2: 
+
+int[] K = new int[7]; // dynamic heap memory allocation
+//default values = 0
+for(int i = 0; i < 7; i++){
+    System.out.println(K[i] + " ");
+}
+
+III) Taking input of elements inside an Array from the User-:
+
+int[] arr = new int[8];
+for(int i = 0; i < 8; i++){
+    arr[i] = sc.nextInt();
+}
+
+IV) To Display the ASCII Symbol from an Integer, we can use the TypeCasting Method -:
+
+int a = 65;
+System.out.println((char)a);
+
+Prints => A
+
+V) Traversing an Array through a for-each loop-:
+
+int[] A  = {1,2,3,4,5};
+
+for(int i: A){
+    System.out.print(i + " "); // prints all the elements of the array.
+}
+Note: We only use for-each loop to traverse or display elements from an Array, as we can't use the for-each loop to modify the elements of an Array, cause for-each loop generates copies of the elements of an array, so no modification to the Original elements takes place.
+
+e.g. Below is a impossible use of a for-each loop inside an array-:
+int[] A = {1,2,3,4};
+for(int i: A){
+    i *= 2;
+}
+for(int i: A){
+    System.out.println(i);
+    // This will not print the doubled values, but the original values only
+}
