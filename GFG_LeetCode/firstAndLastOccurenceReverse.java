@@ -1,8 +1,6 @@
-
-/* First and Last Occurence in a Reverse Sorted Array: */
-
-public class binarySearchDes {
+public class firstAndLastOccurenceReverse {
     public static void main(String[] args) {
+
         // int[] arr = { 80, 60, 40, 4, 3, 3, 1 };
         int[] arr = { 50, 5, 5, 2, 1 };
         int target = 5;
