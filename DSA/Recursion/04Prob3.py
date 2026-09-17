@@ -27,15 +27,27 @@
 
 
 # Sir's method(parmetrised way):
-sum = 0
-i = 1
-n = int(input("Limit: "))
+# sum = 0
+# i = 1
+# n = int(input("Limit: "))
 
-def func(sum, i, n):
-    if i > n:
-        print(sum)
-        return
-    func(sum + i, i + 1, n)
-func(sum, i, n)
+# def func(sum, i, n):
+#     if i > n:
+#         print(sum)
+#         return
+#     func(sum + i, i + 1, n)
+# func(sum, i, n)
+
+# Sir's method(Functional way): i.e. instead of printing, we return the values.
+
+N = int(input("Enter the limit: "))
+def func(N):
+    if N == 1:
+        return 1
+    return N + func(N-1)
+print(func(N))
+
+# Time Complexity: O(N)
+# Space Complexity: O(N) {Stack Space}
 
 
